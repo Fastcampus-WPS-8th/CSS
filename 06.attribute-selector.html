@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    a {
+      font-size: 20px;
+    }
+    a[href] {
+      color: green;
+    }
+    a[href="http://facebook.com"] {
+      color: blue;
+    }
+    a[href^="https"] {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <a>href가 없는 a태그</a>
+  <a href="https://google.co.kr">href가 있는 a태그(Google)</a>
+  <a href="http://facebook.com">href가 있는 a태그(Facebook)</a>
+</body>
+</html>

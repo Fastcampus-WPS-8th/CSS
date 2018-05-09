@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /* 같은 요소를 가리키는 선택자가 여러개일 경우,
+    각 선택자에 중복된 속성이 있으면 우선순위가 높은 선택자의
+    속성값이 적용된다 */
+    .title {
+      font-size: 9px;
+      text-align: right;
+      color: #0f0;
+    }
+    #index-title {
+      font-size: 18px;
+      color: #f00;
+    }
+    p#index-description {
+      font-size: 12px;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <h3 id="index-title" class="title">Lorem ipsum dolor.</h3>
+  <p id="index-description">Lorem ipsum dolor sit amet.</p>
+  
+  
+  <section>
+    <ul></ul>
+    <h1></h1>
+    <ul></ul>
+    <ul></ul>
+  </section>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  a:link {
+    color: green;
+  }
+  a:visited {
+    color: red;
+  }
+  a:hover {
+    color: yellow;
+  }
+  a:active {
+    font-size: 50px;
+    color: #ffffff;
+    color: rgb(255, 255, 255);
+    color: rgba(0, 0, 0, 0.3);
+  }
+  
+  .container > a:nth-of-type(3n + 1) {
+    color: black;
+  }
+  .container2 > :nth-child(2n) {
+    border: 1px solid black;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="http://sjdkfjksejfskef.com">안 가본 링크</a>
+    <a href="http://sjdkfjksejfskef.com">안 가본 링크</a>
+    <a href="http://sjdkfjksejfskef.com">안 가본 링크</a>
+    <a href="http://sjdkfjksejfskef.com">안 가본 링크</a>
+    <a href="http://sjdkfjksejfskef.com">안 가본 링크</a>
+    <a href="http://sjdkfjksejfskef.com">안 가본 링크</a>
+    <a href="https://google.co.kr">구글</a>
+  </div>
+  
+  <h2>container2</h2>
+  <div class="container2">
+    <a href="">ASDF</a>
+    <p>SDFSDF</p>
+    <div>SEFEFFFD</div>
+    <a href="">ASDF</a>
+    <p>SDFSDF</p>
+    <div>SEFEFFFD</div>
+    <a href="">ASDF</a>
+    <p>SDFSDF</p>
+    <div>SEFEFFFD</div>
+  </div>
+</body>
+</html>
