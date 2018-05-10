@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    p {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <button id="btn1">Button1</button>
+  <button id="btn2">Button2</button>
+  <button id="btn3">Button3</button>
+  
+  <p id="p1">Paragraph1</p>
+  <p id="p2">Paragraph2</p>
+  <p id="p3">Paragraph3</p>
+<script>
+  document.getElementById('btn1').onclick = function() {
+    document.getElementById('p1').style.display = 'block';
+    document.getElementById('p2').style.display = 'none';
+    document.getElementById('p3').style.display = 'none';
+  }
+  document.getElementById('btn2').onclick = function() {
+    document.getElementById('p1').style.display = 'none';
+    document.getElementById('p2').style.display = 'block';
+    document.getElementById('p3').style.display = 'none';
+  }
+  document.getElementById('btn3').onclick = function() {
+    document.getElementById('p1').style.display = 'none';
+    document.getElementById('p2').style.display = 'none';
+    document.getElementById('p3').style.display = 'block';
+  }
+</script>
+</body>
+</html>
