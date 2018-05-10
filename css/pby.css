@@ -1,3 +1,4 @@
+/* 기본 요소의 속성 변경 */
 html, body {
   padding: 0;
   margin: 0;
@@ -9,8 +10,59 @@ body {
   font-size: 0.9rem;
   line-height: 1.5;
   color: #373a3c;
+  /* 본문의 좌/우에 10px씩 내부 여백 지정 */
+  padding: 0 10px;
 }
 a {
   color: #0275d8;
   text-decoration: none;
+}
+table {
+  border: 1px solid black;
+}
+td {
+  border: 1px solid red;
+}
+img {
+  max-width: 100%;
+}
+
+/* 실제 본문 스타일 */
+/* 최근 수정 일자 */
+p.modified-datetime {
+  text-align: right;
+}
+
+/* 분류 모음 리스트 */
+/* > : 자식선택자 */
+.category-container {
+  /* 분류: ... | ... | ... 을 포함하는 박스에 테두리 */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 3px;
+  padding-left: 5px;
+}
+.category-container > ul {
+  /* 리스트 아이템의 bullet을 없앰 */
+  list-style-type: none;
+}
+
+/* 동음이의어(또는 연관)문서 링크 */
+.related-document-container {
+  /* 아래여백 */
+  margin-bottom: 15px;
+}
+/* 좌측 초록색 화살표의 크기 */
+.related-document-container > img.img-arrow {
+  width: 21px;
+  margin-right: 4px;
+}
+/* 자식 요소들의 수직 정렬 기준을 모든 요소들의 수직중앙을 기준으로 함 */
+.related-document-container > * {
+  vertical-align: middle;
+}
+
+/* 정보 테이블이 부모의 가로길이로부터 최대 100%크기를 갖도록 함 */
+table.info-table {
+  max-width: 100%;
 }
