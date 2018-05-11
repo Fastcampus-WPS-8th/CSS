@@ -1,3 +1,4 @@
+$color-a: #585858;
 html, body {
   padding: 0;
   margin: 0;
@@ -7,6 +8,10 @@ ul, ol {
   padding: 0;
   margin: 0;
   list-style-type: none;
+}
+a {
+  color: $color-a;
+  text-decoration: none;
 }
 
 $header-nav-height: 61px;
@@ -33,10 +38,31 @@ header.main-header {
     height: 100%;
     float: left;
   }
-  ul.right {
+  .right {
     height: 100%;
-    // ul요소 자체가 우측으로 가도록 정렬
     float: right;
+    
+    // 우측 메뉴 모음(div)의 .header-menu-list(ul)들은
+    // float: left;를 가져서 왼쪽부터 차례대로 수평 정렬 
+    .header-menu-list {
+      float: left;
+      
+      li > a {
+        padding: 0 15px;
+      }
+      
+      // 방 검색, 관심목록, 방 등록 리스트
+      &.room-list {
+        // 체인선택자 (두 선택자가 모두 있는 요소를 가리킴)
+        //   .header-menu-list.room-list
+        font-size: 14px;
+      }
+      // 회원가입/로그인 리스트
+      &.auth-list {
+        //   .header-menu-list.auth-list
+        font-size: 12px;
+      }
+    }
   }
 }
 
