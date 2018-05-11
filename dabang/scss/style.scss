@@ -17,9 +17,16 @@ header.main-header {
   border-bottom: 1px solid $header-border-color;
   
   ul.header-menu-list {
-    // ul요소 내부에서 li들이 왼쪽 기준으로 정렬
     li {
+      // ul요소 내부에서 li들이 왼쪽 기준으로 정렬
       float: left;
+      // 세로길이 만큼의 줄 간격을 설정해서 수직 중앙 정렬
+      line-height: $header-nav-height;
+      img {
+        // 이미지들은 각각의 height값이 전부 다르기 때문에 각 이미지들의 
+        // 수직 중앙 부분을 기준으로 정렬되도록 vertical-align설정
+        vertical-align: middle;
+      }
     }
   }
   ul.left {

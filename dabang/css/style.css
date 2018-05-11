@@ -17,6 +17,11 @@ header.main-header {
 
 header.main-header ul.header-menu-list li {
   float: left;
+  line-height: 61px;
+}
+
+header.main-header ul.header-menu-list li img {
+  vertical-align: middle;
 }
 
 header.main-header ul.left {
