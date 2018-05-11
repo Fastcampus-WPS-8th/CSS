@@ -9,19 +9,27 @@ ul, ol {
   list-style-type: none;
 }
 
+$header-nav-height: 61px;
+$header-border-color: #e7e7e7;
+
 header.main-header {
-  ul.left {
-    li {
-      float: left;
-    }
-  }
-  ul.right {
-    // ul요소 자체가 우측으로 가도록 정렬
-    float: right;
+  height: $header-nav-height;
+  border-bottom: 1px solid $header-border-color;
+  
+  ul.header-menu-list {
     // ul요소 내부에서 li들이 왼쪽 기준으로 정렬
     li {
       float: left;
     }
+  }
+  ul.left {
+    height: 100%;
+    float: left;
+  }
+  ul.right {
+    height: 100%;
+    // ul요소 자체가 우측으로 가도록 정렬
+    float: right;
   }
 }
 

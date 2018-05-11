@@ -10,14 +10,21 @@ ul, ol {
   list-style-type: none;
 }
 
-header.main-header ul.left li {
+header.main-header {
+  height: 61px;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+header.main-header ul.header-menu-list li {
+  float: left;
+}
+
+header.main-header ul.left {
+  height: 100%;
   float: left;
 }
 
 header.main-header ul.right {
+  height: 100%;
   float: right;
-}
-
-header.main-header ul.right li {
-  float: left;
 }
