@@ -16,16 +16,18 @@ a {
 
 $header-nav-height: 61px;
 $header-border-color: #e7e7e7;
-
 header.main-header {
   height: $header-nav-height;
   border-bottom: 1px solid $header-border-color;
   
+  // header에서 사용하는 모든 리스트에 해당
   ul.header-menu-list {
+    // header의 모든 리스트 아이템들은 
+    //   왼쪽 기준 수평 정렬
+    //   $header-nav-height(61px)의 줄 간격을 가짐
+    //     -> 수직 중앙 정렬에 사용
     li {
-      // ul요소 내부에서 li들이 왼쪽 기준으로 정렬
       float: left;
-      // 세로길이 만큼의 줄 간격을 설정해서 수직 중앙 정렬
       line-height: $header-nav-height;
       img {
         // 이미지들은 각각의 height값이 전부 다르기 때문에 각 이미지들의 
@@ -34,28 +36,35 @@ header.main-header {
       }
     }
   }
+  
+  // header의 좌측 메뉴
+  //   메인로고, 다방프로 로고를 포함
   ul.left {
     height: 100%;
     float: left;
+    
+    li > a {
+      padding: 0 15px;
+    }
   }
+  
+  // header의 우측 메뉴
+  //   .room-list, .auth-list 2개의 리스트를 자식으로 가짐
   .right {
     height: 100%;
     float: right;
     
-    // 우측 메뉴 모음(div)의 .header-menu-list(ul)들은
-    // float: left;를 가져서 왼쪽부터 차례대로 수평 정렬 
     .header-menu-list {
-      float: left;
-      
+      float: left;  
       li > a {
         padding: 0 15px;
       }
-      
       // 방 검색, 관심목록, 방 등록 리스트
       &.room-list {
         // 체인선택자 (두 선택자가 모두 있는 요소를 가리킴)
         //   .header-menu-list.room-list
         font-size: 14px;
+        margin-right: 12px;
       }
       // 회원가입/로그인 리스트
       &.auth-list {
@@ -66,3 +75,8 @@ header.main-header {
   }
 }
 
+$search-container-height: 678px;
+.search-container {
+  height: $search-container-height;
+  background-position: center center;
+}

@@ -34,6 +34,10 @@ header.main-header ul.left {
   float: left;
 }
 
+header.main-header ul.left li > a {
+  padding: 0 15px;
+}
+
 header.main-header .right {
   height: 100%;
   float: right;
@@ -49,8 +53,14 @@ header.main-header .right .header-menu-list li > a {
 
 header.main-header .right .header-menu-list.room-list {
   font-size: 14px;
+  margin-right: 12px;
 }
 
 header.main-header .right .header-menu-list.auth-list {
   font-size: 12px;
+}
+
+.search-container {
+  height: 678px;
+  background-position: center center;
 }
