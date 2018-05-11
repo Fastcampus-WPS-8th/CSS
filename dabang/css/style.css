@@ -1,0 +1,23 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+
+ul, ol {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+header.main-header ul.left li {
+  float: left;
+}
+
+header.main-header ul.right {
+  float: right;
+}
+
+header.main-header ul.right li {
+  float: left;
+}
