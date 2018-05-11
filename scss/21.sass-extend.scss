@@ -1,0 +1,17 @@
+@import 'colors';
+
+%btn {
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  font-size: 15px;
+  background-color: gray;
+}
+.btn-ok {
+  @extend %btn;
+  background-color: $btn-ok-color;
+}
+.btn-cancel {
+  @extend %btn;
+  background-color: red;
+}

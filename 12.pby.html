@@ -6,6 +6,26 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="css/pby.css">
+  <style>
+    /* ul요소의 block속성과 기본 padding값을 해제 */
+    .category-container > ul {
+      display: inline;
+      padding: 0;
+    }
+    /* li요소의 block속성을 해제 */
+    .category-container > ul > li {
+      display: inline;
+    }
+    /* li요소들 마다 마지막에 '|'문자를 집어넣음 */
+    .category-container > ul > li::after {
+      content: '|';
+      padding-left: 5px;
+    }
+    /* ul의 맨 마지막 li요소는 ::after 가상 선택자 내용을 없앰 */
+    .category-container > ul > li:last-child::after {
+      display: none;
+    }
+  </style>
 </head>
 <body>
   <h1>박보영</h1>

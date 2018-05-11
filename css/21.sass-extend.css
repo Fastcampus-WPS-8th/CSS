@@ -1,0 +1,15 @@
+.btn-ok, .btn-cancel {
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  font-size: 15px;
+  background-color: gray;
+}
+
+.btn-ok {
+  background-color: #0000ff;
+}
+
+.btn-cancel {
+  background-color: red;
+}

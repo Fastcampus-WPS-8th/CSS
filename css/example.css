@@ -1,0 +1,20 @@
+.container > #body-title {
+  font-size: 14px;
+}
+
+.container .description {
+  font-size: 9px;
+  color: #0000ff;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+}
+
+.link-container > a {
+  font-size: 30px;
+}

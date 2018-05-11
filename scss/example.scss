@@ -1,0 +1,25 @@
+@import 'colors';
+
+.container {
+  > #body-title {
+    font-size: 14px;
+  }
+  .description {
+    font-size: 9px;
+    color: $btn-ok-color;
+  }
+}
+
+
+a {
+  text-decoration: none;
+  
+  &:hover {
+    color: red;
+  }
+  
+  .link-container > & {
+    font-size: 30px;
+  }
+}
+

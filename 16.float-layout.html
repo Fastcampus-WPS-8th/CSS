@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .float-frame {
+      width: 300px;
+      background-color: #eee;
+      border: 1px solid #ddd;
+      padding: 10px;
+    }
+    .float-frame::after {
+      content: '';
+      display: block;
+      height: 0;
+      clear: both;
+    }
+    .float-unit {
+      width: 50px;
+      background-color: #333;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      padding: 15px 0;
+      margin-right: 5px;
+      float: left;
+    }
+  </style>
+</head>
+<body>
+  <div class="float-frame">
+    <div class="float-unit">A</div>
+    <div class="float-unit">B</div>
+    <div class="float-unit">C</div>
+    <div class="float-unit">D</div>
+  </div>
+</body>
+</html>
