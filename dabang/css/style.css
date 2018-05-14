@@ -115,7 +115,6 @@ header.main-header .right .header-menu-list.auth-list {
   padding-top: 32%;
   position: relative;
   margin-right: 2%;
-  border: 1px solid black;
   box-sizing: border-box;
 }
 
@@ -130,6 +129,15 @@ header.main-header .right .header-menu-list.auth-list {
   text-align: center;
   width: 100%;
   height: 100%;
+  overflow: hidden;
+}
+
+.theme-container .theme-list li.theme > .theme-content:hover > .mask {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.theme-container .theme-list li.theme > .theme-content:hover > .bg {
+  transform: scale(1.3);
 }
 
 .theme-container .theme-list li.theme > .theme-content:after {
@@ -140,10 +148,29 @@ header.main-header .right .header-menu-list.auth-list {
   margin-right: -0.25em;
 }
 
+.theme-container .theme-list li.theme > .theme-content > .bg, .theme-container .theme-list li.theme > .theme-content .mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition-duration: .5s;
+}
+
+.theme-container .theme-list li.theme > .theme-content > .bg {
+  background-size: cover;
+}
+
+.theme-container .theme-list li.theme > .theme-content > .mask {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .theme-container .theme-list li.theme > .theme-content > .typo {
+  position: relative;
   display: inline-block;
   vertical-align: middle;
   width: 90%;
+  color: #fff;
 }
 
 .theme-container .theme-list li.theme.vertical-table > .theme-content > .outer {

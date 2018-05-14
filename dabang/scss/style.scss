@@ -142,7 +142,6 @@ $theme-container-width: 960px;
       position: relative;
       
       margin-right: 2%;
-      border: 1px solid black;
       box-sizing: border-box;
       
       &:nth-of-type(3n) {
@@ -156,6 +155,18 @@ $theme-container-width: 960px;
         text-align: center;
         width: 100%;
         height: 100%;
+        overflow: hidden;
+        
+        // 이 영역에 마우스가 올라오면 자식요소중 .mask의 bgc를 바꿔줌
+        &:hover {
+          > .mask {
+            background-color: rgba(0, 0, 0, 0.2);
+          }
+          // .bg의 경우 크기를 조절함 (1.3배)
+          > .bg {
+            transform: scale(1.3);
+          }
+        }
         
         &:after {
           content: '';
@@ -164,11 +175,33 @@ $theme-container-width: 960px;
           vertical-align: middle;
           margin-right: -0.25em;
         }
+        // 각각 최대 가로세로를 차지, 
+        // absolute속성으로 겹치도록 배열
+        > .bg, .mask {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          // 크기/색상등의 변화가 있을 때
+          // 변화를 어느정도 시간동안에 걸쳐서 적용할 것인지
+          transition-duration: .5s;
+        }
+        // background-image가 부모 크기를 채우도록 함
+        > .bg {
+          background-size: cover;
+        }
+        // 글자 아래 검정 레이어. 투명도 설정
+        > .mask {
+          background-color: rgba(0, 0, 0, .5);
+        }
         
         > .typo {
+          position: relative;
           display: inline-block;
           vertical-align: middle;
           width: 90%;
+          color: #fff;
         }
       }
     }
