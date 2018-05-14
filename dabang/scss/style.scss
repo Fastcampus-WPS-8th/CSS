@@ -76,7 +76,55 @@ header.main-header {
 }
 
 $search-container-height: 678px;
+$search-bottom-height: 110px;
+$search-bottom-child-elements-height: 50px;
 .search-container {
+  // absolute인 자식요소가 이 부모를 기준으로 정렬되도록
+  position: relative;
   height: $search-container-height;
   background-position: center center;
+  
+  > .search-bottom {
+    width: 100%;
+    // 부모요소 기준으로 아래에 배치
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .6);
+    height: $search-bottom-height;
+    
+    // input, button을 갖고있는 컨테이너
+    // 가로 534픽셀 고정하고 block에서 가운데 정렬 
+    > .input-container {
+      $input-width: 434px;
+      $button-width: 100px;
+      
+      width: $input-width + $button-width;
+      // (110px - 50px) / 2
+      margin: ($search-bottom-height - $search-bottom-child-elements-height) / 2 auto 0;
+      
+      // input과 button공통속성
+      > * {
+        box-sizing: border-box;
+        float: left;
+        height: $search-bottom-child-elements-height;
+        border: none;
+      }
+      input {
+        width: $input-width;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        font-size: 14px;
+        color: #585858;
+        padding: 0 20px;
+      }
+      button {
+        width: $button-width;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        background-color: #3b8de0;
+        font-size: 15px;
+        color: #fff;
+      }
+    }
+  }
 }
