@@ -48,6 +48,46 @@
          </div>
        </div>
     </div>
+    
+    <div class="theme-container">
+      <ul class="theme-list">
+        <li class="theme">
+          <!-- 
+          .theme는 height를 width와 같게 맞추기위한 padding으로 가득 차 있으므로
+          .theme가 차지하는 영역에 실제로 들어갈 내용을 위한 div새로 생성
+          position: absolute; 속성을 사용해 부모 위치를 기준으로 정렬 
+          -->
+          <div class="theme-content">
+            <div class="typo">
+              <h3 class="title">반려동물</h3>
+              <div class="line"></div>
+              <p class="description">반려동물과 함께 살 수 있는 방 찾아보기</p>
+            </div>
+          </div>
+        </li>
+        <!-- li역할 및 padding을 사용해 height값 설정 -->
+        <li class="theme vertical-table">
+          <!-- 부모요소가 padding이므로 실제 내용 들어갈 부분 -->
+          <div class="theme-content">
+            <!-- table-cell방식 수직중앙정렬을 사용하기위한 display: table; 부분 -->
+            <div class="outer">
+              <!-- table-cell이 될 부분 -->
+              <div class="inner">
+                <div class="typo">
+                  <h3 class="title">반려동물</h3>
+                  <div class="line"></div>
+                  <p class="description">반려동물과 함께 살 수 있는 방 찾아보기</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="theme"></li>
+        <li class="theme"></li>
+        <li class="theme"></li>
+        <li class="theme"></li>
+      </ul>
+    </div>
   </div>
   
   <footer></footer>
